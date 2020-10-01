@@ -8,9 +8,9 @@ public class AddressBook {
         buddies = new ArrayList<>();
     }
 
-    public void addBuddy(BuddyInfo Buddy) {
-        if (Buddy != null) {
-            buddies.add(Buddy);
+    public void addBuddy(BuddyInfo buddy) {
+        if (buddy != null) {
+            buddies.add(buddy);
         }
     }
 
@@ -21,6 +21,10 @@ public class AddressBook {
                 buddyIterator.remove();
             }
         }
+    }
+
+    public String getBuddyName(BuddyInfo buddy) {
+        return buddy.getName();
     }
 
     public static void main(String[] args) {
