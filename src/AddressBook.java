@@ -30,6 +30,7 @@ public class AddressBook {
         addressBook.addBuddy(buddy);
         addressBook.remove(buddy);
         System.out.println("testing");
+        System.out.println("testing Git editor");
     }
 
 
