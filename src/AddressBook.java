@@ -2,11 +2,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class AddressBook {
+    private ArrayList<BuddyInfo> buddies;
 
-    public ArrayList<BuddyInfo> buddies = new ArrayList<>();
+    public AddressBook() {
+        buddies = new ArrayList<>();
+    }
 
-    public void addBuddy(BuddyInfo buddy){
-        buddies.add(buddy);
+    public void addBuddy(BuddyInfo Buddy) {
+        if (Buddy != null) {
+            buddies.add(Buddy);
+        }
     }
 
     public void remove(BuddyInfo buddy) {
@@ -19,13 +24,13 @@ public class AddressBook {
     }
 
     public static void main(String[] args) {
-         System.out.println("Address Book");
-
-         BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
-         AddressBook addressBook = new AddressBook();
-         addressBook.addBuddy(buddy);
-         addressBook.remove(buddy);
-
+        System.out.println("Address Book");
+        BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.remove(buddy);
+        System.out.println("testing");
     }
+
 
 }
